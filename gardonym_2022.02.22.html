@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/center.css">
+    <title>JS EGÉRMŰVELETEK</title>
+</head>
+<body>
+    <div class="container my-3">
+        <div class="row">
+            <div class="col-2"></div>
+            <div class="col-4 c">
+                <p>EGÉRKURZOR RÁVITEL – ELHAGYÁS <br> KÉPVÁLTÁS </p>
+
+                <img onmouseover="on(this)" onmouseout="out(this)" border="0" src="kepek/pic_bulboff.gif" alt="" >
+
+                <script>
+                    function on(x) {
+                        x.src="kepek/pic_bulbon.gif";
+                    }
+                
+                    function out(x) {
+                        x.src="kepek/pic_bulboff.gif";
+                    }
+                </script>
+            </div>
+            <div class="col-4 c">
+                <p>EGÉRKURZOR RÁVITEL – ELHAGYÁS <br> NAGYÍTÁS</p>
+                <img onmouseenter="nagy1(this)" onmouseleave="normal1(this)" border="0" src="kepek/pic_bulboff.gif" alt="" width="100" height="180">
+            
+                <script>
+                    function nagy1(x) {
+                        x.style.height = "360px";
+                        x.style.width = "200px";
+                    }
+            
+                    function normal1(x) {
+                        x.style.height = "180px";
+                        x.style.width = "100px";
+                    }
+                </script>
+            </div>
+            <div class="col-2"></div>
+          </div>
+    </div>
+    <div class="container my-3">
+        <div class="row">
+            <div class="col-2"></div>
+            <div class="col-4 c">
+                <p>EGÉRKURZOR RÁVITEL – ELHAGYÁS <BR>MEGJELENÍTÉS</BR>   </p>
+                <img onmouseenter="document.getElementById('demo').style.display='block'"" onmouseleave="document.getElementById('demo').style.display='none'" border="0" src="kepek/pic_bulboff.gif" alt="" width="100" height="180">
+            </div>
+            <div class="col-4 c">
+                <P><BR></BR></P>
+                <img id="demo" src="kepek/pic_bulbon.gif" alt="" >
+            </div>
+            <div class="col-2"></div>
+        </div>
+    </div>
+    
+    <div class="container my-3">
+        <div class="row">
+            <div class="col-2"></div>
+            <div class="col-4 c">
+                <p> EGÉRGOMB LENYOMVA – FELENGEDVE <br>KÉPVÁLTÁS</p>
+                <script>
+                    function mouseDown() {
+                      document.getElementById("image").src = "/kepek/pic_bulboff.gif";
+                    }
+                    
+                    function mouseUp() {
+                      document.getElementById("image").src = "/kepek/pic_bulbon.gif";
+                    }
+                    </script>
+ 
+            </div>
+            <div class="col-4 c">
+                <p>EGÉRKURZOR LENYOMVA – FELENGEDVE <br> NAGYÍTÁS</p>
+                
+            </div>
+            <div class="col-2"></div>
+        </div>
+    </div>
+
+    <div class="container my-3">
+        <div class="row">
+            <div class="col-2"></div>
+            <div class="col-4 c">
+                <p>EGÉRKURZOR LENYOMVA – FELENGEDVE <BR>MEGJELENÍTÉS</BR>   </p>
+ 
+            <div class="col-2"></div>
+        </div>
+    </div>
+ 
+</body>
+</html>
